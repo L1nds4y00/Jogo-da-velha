@@ -1,8 +1,6 @@
 var jogador1 = '<img src="img/lightsaber.png">';
-var jogador2 = '<img src="img/death-star.png">';
+var jogador2 = '<img src="img/sdeath-star.png">';
 var jogada = true;
-
-
 
 
 function clicar(area) {
@@ -13,16 +11,13 @@ function clicar(area) {
         } else if (!jogada) {
             area.innerHTML = jogador2;
             jogada = true;
-
         }
-        vitoria(area);
+        jogadores(area);
     }
 }
 
 
-
-
-function vitoria(area) {
+function jogadores(area) {
     var box1 = document.getElementById('box1');
     var box2 = document.getElementById('box2');
     var box3 = document.getElementById('box3');
@@ -38,7 +33,6 @@ function vitoria(area) {
     if ((box1.innerHTML == box2.innerHTML) && (box2.innerHTML == box3.innerHTML)) {
 
         vencedor = box1.innerHTML;
-
     }
 
     else if ((box4.innerHTML == box5.innerHTML) && (box5.innerHTML == box6.innerHTML)) {
@@ -68,15 +62,30 @@ function vitoria(area) {
     if (vencedor != '') {
         if (vencedor == jogador1) {
 
-            (alert("1° jogador ganhou"));
+        document.getElementById("mascara").style.backgroundImage = "url('img/yoda.png')";
+        document.getElementById("mascara").style.display = "block"
+        document.getElementById("mascara").style.backgroundRepeat = "no-repeat"
+        document.getElementById("mascara").style.backgroundPosition = "center";;
 
-        } else (alert("2° jogador ganhou"));
+        } else
 
+        document.getElementById("mascara").style.backgroundImage = "url('img/darth-vader.png')";
+        document.getElementById("mascara").style.display = "block"
+        document.getElementById("mascara").style.backgroundRepeat = "no-repeat"
+        document.getElementById("mascara").style.backgroundPosition = "center";
+    }
+    else if ((vencedor == '') && (box1.innerHTML && box2.innerHTML && box3.innerHTML && box4.innerHTML && box5.innerHTML && box6.innerHTML && box7.innerHTML && box8.innerHTML && box9.innerHTML)) {
+
+        document.getElementById("mascara").style.backgroundImage = "url('img/palpatine.png')";
+        document.getElementById("mascara").style.display = "block"
+        document.getElementById("mascara").style.backgroundRepeat = "no-repeat"
+        document.getElementById("mascara").style.backgroundPosition = "center"
 
     }
+
 }
-
-
 function novo(area) {
-    document.location.reload();
+    location.reload();
 }
+
+

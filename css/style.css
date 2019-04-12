@@ -1,5 +1,5 @@
-.body {
-    color: #ffffff
+body {
+    background-color: #ffffff
 }
 
 * {
@@ -17,9 +17,6 @@ img {
     max-width: 100%;
 }
 
-ul {
-    list-style-type: none;
-}
 
 a {
     text-decoration: none;
@@ -30,7 +27,7 @@ a {
     flex-wrap: nowrap;
 }
 
-h2 {
+h1   {
     text-decoration: none;
     color: #000000;
     margin-left: center;
@@ -39,21 +36,6 @@ h2 {
     font-size: 1.5em;
 }
 
-h1 {
-    text-decoration: none;
-    color: #000000;
-    margin-left: 50px;
-    margin-right: 0px;
-    text-align: center;
-}
-
-p {
-    font-size: 2em;
-    color: #000000;
-    margin-left: 55px;
-    margin-right: 0px;
-    text-align: center;
-}
 
 .cabecalho {
     width: 100%;
@@ -120,4 +102,13 @@ p {
 #box {
     float: left;
     margin-right: 10px;
+}
+
+#mascara {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 4;
 }
